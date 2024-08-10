@@ -43,13 +43,3 @@
  // a lot of typing, but can be disabled by setting DONT_SET_USING_JUCE_NAMESPACE.
  using namespace juce;
 #endif
-
-#if ! JUCE_DONT_DECLARE_PROJECTINFO
-namespace ProjectInfo
-{
-    const char* const  projectName    = "Light Host";
-    const char* const  companyName    = "Rolando Islas";
-    const char* const  versionString  = "1.2.0";
-    const int          versionNumber  = 0x10200;
-}
-#endif
