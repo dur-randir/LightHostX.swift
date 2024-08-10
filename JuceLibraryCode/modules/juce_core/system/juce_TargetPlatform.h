@@ -69,31 +69,10 @@
 #endif
 
 //==============================================================================
-#if defined (_WIN32) || defined (_WIN64)
-  #define       JUCE_WINDOWS 1
-#elif defined (JUCE_ANDROID)
-  #undef        JUCE_ANDROID
-  #define       JUCE_ANDROID 1
-#elif defined (__FreeBSD__) || defined (__OpenBSD__)
-  #define       JUCE_BSD 1
-#elif defined (LINUX) || defined (__linux__)
-  #define       JUCE_LINUX 1
-#elif defined (__APPLE_CPP__) || defined (__APPLE_CC__)
   #define CF_EXCLUDE_CSTD_HEADERS 1
   #include <TargetConditionals.h> // (needed to find out what platform we're using)
   #include <AvailabilityMacros.h>
-
-  #if TARGET_OS_IPHONE || TARGET_IPHONE_SIMULATOR
-    #define     JUCE_IPHONE 1
-    #define     JUCE_IOS 1
-  #else
-    #define     JUCE_MAC 1
-  #endif
-#elif defined (__wasm__)
-  #define       JUCE_WASM 1
-#else
-  #error "Unknown platform!"
-#endif
+  #define     JUCE_MAC 1
 
 //==============================================================================
 #if JUCE_WINDOWS
