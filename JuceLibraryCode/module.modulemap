@@ -1,0 +1,5 @@
+
+module Juce {
+    header "JuceHeader.h"
+    requires cplusplus
+}
