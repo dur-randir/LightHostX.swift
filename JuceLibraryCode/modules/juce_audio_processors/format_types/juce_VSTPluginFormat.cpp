@@ -57,8 +57,8 @@ struct AEffect;
 // paths or use the "VST (Legacy) SDK Folder" field in the Projucer. The VST2
 // SDK can be obtained from the vstsdk3610_11_06_2018_build_37 (or older) VST3
 // SDK or JUCE version 5.3.2.
-#include <pluginterfaces/vst2.x/aeffect.h>
-#include <pluginterfaces/vst2.x/aeffectx.h>
+#include <fst/aeffect.h>
+#include <fst/aeffectx.h>
 }
 
 #include "juce_VSTCommon.h"
