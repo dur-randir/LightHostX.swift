@@ -1,11 +1,11 @@
 //
-//  LightHostXApp.swift
-//  LightHostX
+//  LightHostX.swift
 //
 //  Created by dur-randir on 09.08.2024.
 //
 
 import SwiftUI
+import Juce
 
 @main
 struct LightHostX: App {
@@ -21,15 +21,21 @@ struct LightHostX: App {
             }.keyboardShortcut("q")
         } label: {
             let image: NSImage = {
-                    let ratio = $0.size.height / $0.size.width
-                    $0.size.height = 18
-                    $0.size.width = 18 / ratio
-                    return $0
-                }(NSImage(named: "AppIcon")!)
-
-                Image(nsImage: image)
-                    .renderingMode(.template)
+                let ratio = $0.size.height / $0.size.width
+                $0.size.height = 18
+                $0.size.width = 18 / ratio
+                return $0
+            }(NSImage(named: "AppIcon")!)
+            
+            Image(nsImage: image)
+                .renderingMode(.template)
         }
         .menuBarExtraStyle(.menu)
     }
+    
+    var deviceManager: juce.AudioDeviceManager;
+    //var formatManager: juce.AudioPluginFormatManager;
+    //var knownPluginList: juce.KnownPluginList;
+    //var activePluginList: juce.KnownPluginList;
+
 }
